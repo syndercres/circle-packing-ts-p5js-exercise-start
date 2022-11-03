@@ -1,5 +1,5 @@
 {
-  "name": "p5-typescript-starter",
+  "name": "circle-packing-p5-ts",
   "version": "1.0.0",
   "description": "Project to quickly get something working in [p5.js](https://p5js.org/) and [typescript](https://www.typescriptlang.org/)",
   "scripts": {
@@ -8,7 +8,7 @@
     "start-compile": "tsc --watch",
     "start-run": "browser-sync start --server -w"
   },
-  "homepage": "https://github.com/Gaweph/p5-typescript-starter#readme",
+  "homepage": "https://github.com/WeAreAcademy/circle-packing-ts-p5js-exercise-start",
   "devDependencies": {
     "@types/p5": "^1.4.2",
     "browser-sync": "^2.27.9",

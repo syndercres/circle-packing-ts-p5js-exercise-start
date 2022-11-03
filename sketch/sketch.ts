@@ -15,7 +15,14 @@ function draw() {
 
 function drawCircle(c: CircleData) {
     const shade = random(50, 100);
-    fill(shade);
+    fill(random([
+        "#490a3d",
+        "#bd1550",
+        "#e97f02",
+        "#f8ca00",
+        "#8a9b0f",
+        "#e8ddcb","#cdb380","#036564","#033649","#031634"
+      ]));
     noStroke();
     circle(c.position.x, c.position.y, c.radius * 2);
 }

@@ -19,15 +19,12 @@ function calculatePackedCircles(
 ): CircleData[] {
     //TODO: you need to implement this function properly!
     //These are just a couple of random circles, with no consideration yet for avoiding overlap.
-    const circleDataOne: CircleData = {
-        position: { x: 300, y: 300 },
-        radius: 100,
-    };
-    const circleDataTwo: CircleData = {
-        position: { x: random(0, areaWidth), y: random(0, areaHeight) },
-        radius: 40,
-    };
-    return [circleDataOne, circleDataTwo];
+   const validatedCircles: CircleData[] = [];
+    for(let i=0;i<1001;i++){
+        
+    }
+
+return validatedCircles;
 }
 
 /** Returns the distance between two given positions.
@@ -39,3 +36,35 @@ function distance(p1: Position, p2: Position): number {
     const hyp = Math.sqrt(x * x + y * y);
     return hyp;
 }
+
+
+/*function calculatePackedCircles(): CircleData[]
+
+	VALIDATED_CIRCLES = empty array of CircleData objects
+	
+	repeat 1000 times
+	
+			CANDIDATE = generate a CircleData object with a random position and radius
+	
+			if CANDIDATE does not overlap* with any element of VALIDATED_CIRCLES
+	
+			    add CANDIDATE to VALIDATED_CIRCLES
+	
+			else
+	
+			    do nothing (we will not use this candidate)
+	
+	return VALIDATED_CIRCLES
+*/
+
+/*
+    const circleDataOne: CircleData = {
+        position: { x: 300, y: 300 },
+        radius: 100,
+    };
+    const circleDataTwo: CircleData = {
+        position: { x: random(0, areaWidth), y: random(0, areaHeight) },
+        radius: 40,
+    };
+    return [circleDataOne, circleDataTwo];
+*/

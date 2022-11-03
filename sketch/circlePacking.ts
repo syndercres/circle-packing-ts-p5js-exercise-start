@@ -20,15 +20,28 @@ function calculatePackedCircles(
     //TODO: you need to implement this function properly!
     //These are just a couple of random circles, with no consideration yet for avoiding overlap.
    const validatedCircles: CircleData[] = [];
-    for(let i=0;i<6;i++){
+    for(let i=0;i<1001;i++){
         const candidate: CircleData = {
             position: { x: random(0, areaWidth), y: random(0, areaHeight) },
-            radius: random(1,50),
+            radius: random(5,50),
         };
-        validatedCircles.push(candidate);
+        //if CANDIDATE does not overlap* with any element of VALIDATED_CIRCLES
+        if(!overlaps(candidate, validatedCircles)){
+            validatedCircles.push(candidate);
+        }
     }
-
 return validatedCircles;
+}
+// helper function
+function overlaps(candidate: CircleData, validatedCircles: CircleData[]): boolean {
+    for (let circle of validatedCircles){
+        let distanceCirc: number = distance(circle.position, candidate.position)
+        let radius = circle.radius + candidate.radius
+        if (radius > distanceCirc){
+            return true
+        }
+    }
+    return false
 }
 
 /** Returns the distance between two given positions.

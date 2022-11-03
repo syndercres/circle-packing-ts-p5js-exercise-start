@@ -23,7 +23,7 @@ function calculatePackedCircles(
     for(let i=0;i<1001;i++){
         const candidate: CircleData = {
             position: { x: random(0, areaWidth), y: random(0, areaHeight) },
-            radius: random(5,50),
+            radius: random(10,50),
         };
         //if CANDIDATE does not overlap* with any element of VALIDATED_CIRCLES
         if(!overlaps(candidate, validatedCircles)){
